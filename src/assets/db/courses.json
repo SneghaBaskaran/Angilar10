@@ -1,0 +1,18 @@
+{
+  "courses": [
+    {
+      "id": 2,
+      "name": "React Js",
+      "type": 10000,
+      "nextscan": 2,
+      "frequency": "daily"
+    },
+    {
+      "id": 3,
+      "name": "Angular",
+      "type": 10000,
+      "nextscan": 2,
+      "frequency": "monthly"
+    }
+  ]
+}

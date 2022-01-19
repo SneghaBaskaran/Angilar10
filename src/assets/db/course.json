@@ -1,0 +1,46 @@
+{
+  "course": [
+    {
+      "id": 1,
+      "name": "Angular",
+      "pay": 10000,
+      "duration": "30"
+    },
+    {
+      "id": 2,
+      "name": "React Js",
+      "pay": 10000,
+      "duration": "30"
+    },
+    {
+      "name": "Angular",
+      "pay": 12000,
+      "duration": "30",
+      "id": 3
+    },
+    {
+      "name": "db",
+      "pay": "20000",
+      "duration": "30 ",
+      "id": 4
+    },
+    {
+      "name": "db",
+      "pay": "15000",
+      "duration": "30 days",
+      "id": 5
+    },
+    {
+      "name": "HTML",
+      "pay": "15000",
+      "duration": "30 ",
+      "id": 6
+    },
+    {
+      "name": "Bala",
+      "pay": "25000",
+      "duration": "30 ",
+      "id": 7
+    }
+  ]
+}

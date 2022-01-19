@@ -1,0 +1,51 @@
+<p >
+    <mat-toolbar color="primary">
+      <span>My App</span>
+            <a class="nav-link" routerLink="/Task1">Task1</a>
+            <a class="nav-link" routerLink="/Task2">Task2</a>
+            <a class="nav-link" routerLink="/Task3">Task3</a>
+            <a class="nav-link" routerLink="/Task4">Task4</a>
+            <a class="nav-link" routerLink="/Task5">Task5</a>
+    </mat-toolbar>
+  </p><br>
+<div class="container" >
+    <mat-card class="example-card container" style="width: 457px; height: 653px;">
+        <mat-card-header style="margin-left: 35%;">
+          <mat-card-title style="font-size: 41px;">Login</mat-card-title>
+        </mat-card-header><br>
+        <img mat-card-image src="../assets/Tristhalogo.jpg" style="margin-top: -3%; margin-left: 12%;  width: 76%; height: 18%; ">
+        <hr>
+        <mat-card-content>
+            <form class="example-form" (ngSubmit)="formSubmit(form)" #form="ngForm">
+                 <mat-form-field style="margin-left: 21px; width: 330px;"> 
+                    <mat-label>Username</mat-label><br>
+                    <input matInput [(ngModel)]="user.username" name="username" required="required" minlength="3" maxlength="6" pattern="[A-Za-z]{3,6}" #username="ngModel">
+                    <mat-icon matSuffix><span class="material-icons">email </span></mat-icon> 
+                 </mat-form-field>
+                 <br>
+                  <div *ngIf="username.invalid && username.touched">
+                     <mat-error *ngIf="username.errors.required">Username must be required</mat-error>
+                     <mat-error *ngIf="username.errors.minlength">Username must be Minimum of 6 characters</mat-error>
+                     <!-- <mat-error *ngIf="username.errors.pattern">Username must be follorw this pattern</mat-error> -->
+                 </div>
+                 <br>
+                 <mat-form-field style="margin-left: 21px; width: 330px;"> 
+                    <mat-label>Password</mat-label><br>
+                    <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="user.password" name="password" required="required" maxlength="8" pattern="[A-Za-z]{8}" #password="ngModel">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                     </button>
+                 </mat-form-field> 
+                 <br>
+                 <div *ngIf="password.invalid && password.touched">
+                  <mat-error *ngIf="username.errors.required">Username must be required</mat-error>
+                    <mat-error *ngIf="password.errors.pattern">password must be minimum of 8 characters(A-Z,a-z,1..0,@..&)</mat-error>
+                </div><br>
+                <button mat-raised-button class="btn btn-md btn-success" style="margin-left: 65%;" name="login" required>Login</button>  
+            </form> 
+            <hr>
+             <h4 class="link" herf="#"><b> Can't login? </b></h4>
+             <h3 clas="link" herf="#"><b> Sign up for an account </b></h3>
+         </mat-card-content>
+      </mat-card>
+</div>

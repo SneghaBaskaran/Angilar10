@@ -1,0 +1,88 @@
+<p >
+  <mat-toolbar color="primary">
+    <span>My App</span>
+          <a class="nav-link" routerLink="/Task1">Task1</a>
+          <a class="nav-link" routerLink="/Task2">Task2</a>
+          <a class="nav-link" routerLink="/Task3">Task3</a>
+          <a class="nav-link" routerLink="/Task4">Task4</a>
+          <a class="nav-link" routerLink="/Task5">Task5</a>
+  </mat-toolbar>
+</p><br>
+<button mat-button (click)="openDialog()">New Course</button>
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" (click)="add_course()" >New Course</button>
+<ng-template #mymodal let-modal> 
+  <div class="modal fade" id="myModal" >
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="my Model">New Course</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="Schedule-name" class="col-form-label">Schedule Name</label>
+              <input type="text" class="form-control" id="Schedule-name">
+            </div>
+            <div class="form-group">
+              <label for="" class="col-form-label"></label>
+              <div class="dropdown">
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" >Action</a>
+                    <a class="dropdown-item" >Another action</a>
+                    <a class="dropdown-item" >Something else here</a>
+                  </div>
+              </div>
+              <div class="form-group">
+                   <label for="" class="col-form-label"></label> 
+                  <select name="cars" id="cars">
+                      <option value="daily">Daily</option>
+                      <option value="weekly">Weekly</option>
+                      <option value="monthly">Monthly</option>
+                      <option value="yearly">Yearly</option>
+                    </select>
+            </div>       
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Create</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  </div>
+ </ng-template>  -->
+
+  <div class="container set-margin">
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>Id</th>
+            <th scope="col">Name</th>
+            <th scope="col" type="number">Type</th>
+            <th scope="col" type="number">Next Scan</th>
+            <th scope="col" type="number">Frequency</th>
+            <th scope="col">Active</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let coure of course">
+            <th scope="row">{{coure.id}}</th>
+            <td>{{coure.name}}</td>
+            <td>{{coure.type}}</td>
+            <td>{{coure.nextscan}}</td>
+            <td>{{coure.frequency}}</td>
+            <td><mat-slide-toggle></mat-slide-toggle></td>
+            <td><span class="material-icons" (click)="edit_course(coure.id)">edit</span></td>
+            <td><span class="material-icons" (click)="delete_course(coure.id)">delete</span></td>
+           
+          </tr>
+        </tbody>
+      </table>
+  </div>
+ 

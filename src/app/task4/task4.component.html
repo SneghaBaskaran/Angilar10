@@ -1,0 +1,28 @@
+<p >
+    <mat-toolbar color="primary">
+      <span>My App</span>
+            <a class="nav-link" routerLink="/Task1">Task1</a>
+            <a class="nav-link" routerLink="/Task2">Task2</a>
+            <a class="nav-link" routerLink="/Task3">Task3</a>
+            <a class="nav-link" routerLink="/Task4">Task4</a>
+            <a class="nav-link" routerLink="/Task5">Task5</a>
+    </mat-toolbar>
+  </p><br>
+  <div class="container set-margin">
+    <form #form="ngForm" (ngSubmit)="save(form.value)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="name" class="form-control" id="name" [(ngModel)]="course.name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="pay">Pay</label>
+          <input type="pay" class="form-control" id="pay" [(ngModel)]="course.pay" name="pay" >
+        </div>
+        <div class="form-group">
+          <label for="duration">Duration</label>
+          <input type="duration" class="form-control" id="duration" [(ngModel)]="course.duration" name="duration">
+        </div>
+        <button type="submit" class="btn btn-primary">{{ operation }}</button>
+      </form>
+  </div>
+
